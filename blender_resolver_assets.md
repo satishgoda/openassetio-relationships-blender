@@ -1,0 +1,56 @@
+https://github.com/satishgoda/openassetio-relationships-blender/blob/main/blender_resolver_assets.json
+https://github.com/copilot/c/3a942fb0-91b6-4480-898b-98ce01be714a
+
+```
+entities
+├── building_full
+│   ├── versions
+│   │   └── traits
+│   │       ├── openassetio-mediacreation:content.LocatableContent
+│   │       │   ├── location: ${bal_library_dir}/Building/BuildingMain.fbx
+│   │       │   └── mimeType: fbx
+│   │       └── openassetio-mediacreation:identity.DisplayName
+│   │           └── name: Apartment Complex Full Res
+│   └── relations
+│       └── traits
+│           ├── openassetio-mediacreation:representation.Proxy
+│           └── entities
+│               ├── building_greybox
+│               └── building_boundingbox
+├── building_greybox
+│   ├── versions
+│   │   └── traits
+│   │       ├── openassetio-mediacreation:content.LocatableContent
+│   │       │   ├── location: ${bal_library_dir}/Building/BuildingGreybox.fbx
+│   │       │   └── mimeType: fbx
+│   │       └── openassetio-mediacreation:identity.DisplayName
+│   │           └── name: Apartment Complex Greybox
+│   └── relations
+│       ├── traits
+│       │   └── openassetio-mediacreation:representation.Proxy
+│       │       └── entities
+│       │           ├── building_boundingbox
+│       │           └── building_full
+│       └── traits
+│           └── openassetio-mediacreation:representation.Original
+│               └── entities
+│                   └── building_full
+└── building_boundingbox
+    ├── versions
+    │   └── traits
+    │       ├── openassetio-mediacreation:content.LocatableContent
+    │       │   ├── location: ${bal_library_dir}/Building/BuildingBoundingBox.fbx
+    │       │   └── mimeType: fbx
+    │       └── openassetio-mediacreation:identity.DisplayName
+    │           └── name: Apartment Complex Bounding Box
+    └── relations
+        ├── traits
+        │   └── openassetio-mediacreation:representation.Proxy
+        │       └── entities
+        │           ├── building_greybox
+        │           └── building_full
+        └── traits
+            └── openassetio-mediacreation:representation.Original
+                └── entities
+                    └── building_full
+```
